@@ -11,6 +11,7 @@
     // - Use const, but not #define.
     // - Use new and delete operators.
     // - Use cout & endl instead of printf().
+    // - Do not use "using namespace std;".
     // - Do not change the return type of sum().
     //     
 #if 0
@@ -37,8 +38,6 @@ int main(int argc, char *argv[]) {
 #else 
 #include <iostream>
 
-using namespace std;
-
 const int N = 40;
 
 void sum(int d[], int n, int &p){
@@ -57,7 +56,7 @@ int main(int argc, char *argv[]) {
         data[i] = i;
     sum(data,N,total);
 
-    cout << "The Total is " << total << "\n";
+    std::cout << "The Total is " << total << "\n";
 
     delete[] data;
     return 0;
