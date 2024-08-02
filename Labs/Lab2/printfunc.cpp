@@ -1,6 +1,8 @@
 // C++ for C Coders & Data Structures
-// Lecture note by idebtor@gmail.com
+#include "printfunc.h"
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 void printfunc(int n, char *names[]) {
@@ -8,5 +10,8 @@ void printfunc(int n, char *names[]) {
 		cout << "Hello " << names[i] << "!" << endl;
 }
 
-// Add another printfunc() for function overloading 
-
+void printfunc(std::vector<std::string>& names) {
+    for (std::string& name : names) {
+        std::cout << "Hello " << name << "!" << std::endl;
+    }
+}
